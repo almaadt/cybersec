@@ -4,7 +4,7 @@
 Attacco SQL Injection con SQLmap e Contromisure
 
 Descrizione del Progetto
-Questo progetto ha l’obiettivo di dimostrare il funzionamento di un attacco SQL Injection utilizzando SQLmap, un tool open-source per testare la sicurezza dei database contro questo tipo di attacco. Il progetto include un ambiente di test con un’applicazione vulnerabile a SQL Injection e documentazione su come sfruttare questa vulnerabilità per accedere a dati sensibili.
+- Questo progetto ha l’obiettivo di dimostrare il funzionamento di un attacco SQL Injection utilizzando SQLmap, un tool open-source per testare la sicurezza dei database contro questo tipo di attacco. Il progetto include un ambiente di test con un’applicazione vulnerabile a SQL Injection e documentazione su come sfruttare questa vulnerabilità per accedere a dati sensibili.
 
 Funzionalità del Progetto
 1. Setup di un’applicazione vulnerabile con supporto per test SQL Injection.
@@ -37,19 +37,19 @@ Esecuzione dell'Attacco SQL Injection con SQLmap
    che restituisce (tramite il dump) i campi 'username' e 'password' di tutti gli utenti presenti nella tabella 'utenti' (che a sua volta si trova nel database 'demo').
 
 Test delle contromisure
-Le vulnerabilità vengono risolte con una query preparata, presente all'interno del file 'sqlmapsafe.php', infatti, eseguendo il comando:
-    sqlmap -u "http://indirizzo_macchina_ubuntu/app/sqlmapsafe.php?id=1" -D demo -T utenti -C "username,password" --dump
+- Le vulnerabilità vengono risolte con una query preparata, presente all'interno del file 'sqlmapsafe.php', infatti, eseguendo il comando:
+    - sqlmap -u "http://indirizzo_macchina_ubuntu/app/sqlmapsafe.php?id=1" -D demo -T utenti -C "username,password" --dump  
 possiamo notare che l'attacco fallisce.
 
 Struttura del Repository
-/app: directory contenente l'applicativo.
-database-di-esempio.dmp: database MySQL di esempio.
-README.md: documentazione del progetto.
+- /app: directory contenente l'applicativo.
+- database-di-esempio.dmp: database MySQL di esempio.
+- README.md: documentazione del progetto.
 
 Avvertenze Legali
-Questo progetto è stato sviluppato esclusivamente a scopo didattico. Qualsiasi test di vulnerabilità deve essere eseguito solo su sistemi di cui si ha il permesso di analizzare la sicurezza. L'uso non autorizzato di SQLmap o di altri strumenti di attacco per compromettere la sicurezza di sistemi altrui è illegale e può portare a gravi conseguenze legali. L'autore declina ogni responsabilità per l'uso improprio di questo progetto.
+- Questo progetto è stato sviluppato esclusivamente a scopo didattico. Qualsiasi test di vulnerabilità deve essere eseguito solo su sistemi di cui si ha il permesso di analizzare la sicurezza. L'uso non autorizzato di SQLmap o di altri strumenti di attacco per compromettere la sicurezza di sistemi altrui è illegale e può portare a gravi conseguenze legali. L'autore declina ogni responsabilità per l'uso improprio di questo progetto.
 
 Risorse Utili
-  sqlmap.org
-  owasp.org/www-community/attacks/SQL_Injection
+  - sqlmap.org
+  - owasp.org/www-community/attacks/SQL_Injection
 
