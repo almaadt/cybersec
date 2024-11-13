@@ -20,13 +20,13 @@ Installazione
 1. Installare VirtualBox e creare due macchine virtuali: Ubuntu (target) e Kali (attacker).
 2. Modificare l'impostazione 'Rete' di entrambe le macchine, scegliendo l'opzione 'Scheda con bridge', per una corretta comunicazione tra loro.
 3. Eseguire sulla macchina Ubuntu:
-    sudo apt install apache2
-    sudo apt install php
-    sudo apt install mysql-server
-    sudo mysql_secure_installation
-    sudo apt install php-mysqli
-    sudo apt install phpmyadmin
-    sudo apt install ssh
+    sudo apt install apache2;
+    sudo apt install php;
+    sudo apt install mysql-server;
+    sudo mysql_secure_installation;
+    sudo apt install php-mysqli;
+    sudo apt install phpmyadmin;
+    sudo apt install ssh;
 5. Clonare il repository sulla macchina Ubuntu:
     git clone https://github.com/almaadt/cybersec
 6. Copiare la cartella 'app' scaricata con il precedente comando nella directory radice delle pagine web (tipicamente /var/www/html) nella macchina Ubuntu.
