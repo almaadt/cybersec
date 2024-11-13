@@ -29,15 +29,16 @@ Installazione
     sudo apt install ssh
 5. Clonare il repository sulla macchina Ubuntu:
     git clone https://github.com/almaadt/cybersec
-6. Importare il database MySQL di esempio sulla macchina Ubuntu e modificare le password nei files php dell'applicazione.
+6. Copiare la cartella 'app' scaricata con il precedente comando nella directory radice delle pagine web (tipicamente /var/www/html) nella macchina Ubuntu.
+7. Importare il database MySQL di esempio sulla macchina Ubuntu e modificare le password nei files php dell'applicazione.
 
 Esecuzione dell'Attacco SQL Injection con SQLmap
-1. Eseguire il comando:
+1. Eseguire sulla macchina Kali il comando:
     sqlmap -u "http://indirizzo_macchina_ubuntu/app/sqlmapunsafe.php?id=1" -D demo -T utenti -C "username,password" --dump
    che restituisce (tramite il dump) i campi 'username' e 'password' di tutti gli utenti presenti nella tabella 'utenti' (che a sua volta si trova nel database 'demo').
 
 Test delle contromisure
-- Le vulnerabilità vengono risolte con una query preparata, presente all'interno del file 'sqlmapsafe.php', infatti, eseguendo il comando:
+- Le vulnerabilità vengono risolte con una query preparata, presente all'interno del file 'sqlmapsafe.php', infatti, eseguendo in Kali il comando:
     - sqlmap -u "http://indirizzo_macchina_ubuntu/app/sqlmapsafe.php?id=1" -D demo -T utenti -C "username,password" --dump  
 possiamo notare che l'attacco fallisce.
 
