@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/a67d2531-a6cc-4f85-92dd-0786fad8983c)# cybersec
+# cybersec
 # Esame cybersecurity
 
 Attacco SQL Injection con SQLmap e Contromisure
